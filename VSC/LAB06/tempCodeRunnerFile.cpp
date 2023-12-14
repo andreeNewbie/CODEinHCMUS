@@ -1,0 +1,2 @@
+if (fin.eof()) 
+                    line = "";
