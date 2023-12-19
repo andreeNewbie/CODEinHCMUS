@@ -13,12 +13,12 @@ int sum(int a[], int b[], int n)
 
 void print(int a[], int b[], int n)
 {
-    cout << "[ ";
+    cout << "{ ";
     for (int i = 0; i < n; i++)
     {
-        if (b[i] == 1) cout << a[i] << " ";
+        if (b[i] == 1) cout << a[i] << ", ";
     }
-    cout << " ]" << endl;
+    cout << " }" << endl;
 }
 
 void find(int a[], int b[], int pos, int n)
