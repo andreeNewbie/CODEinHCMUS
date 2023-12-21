@@ -6,10 +6,9 @@ using namespace std;
 
 int main()
 {
-    string a ("Helo......");
+    string a ("KPNAloveTTK");
 
-    a.erase(a.begin()+3);
-    cout << a;
+    cout << a.rfind("K");
 
     return 0;
 }
