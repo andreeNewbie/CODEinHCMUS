@@ -35,7 +35,7 @@ int copyFile(char input[], char output[])
 int convertFile60CharsperLine(char input[], char output[])
 {
     ifstream fin(input);
-    ofstream fout(output);
+    fstream fout(output, ios::out);
 
     string line, temp = "";
     int count = 0;
