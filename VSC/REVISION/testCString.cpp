@@ -6,9 +6,13 @@ using namespace std;
 
 int main()
 {
-    string a ("KPNAloveTTK");
+    string a = "Phan Nhut Anh";
 
-    cout << a.rfind("K");
+    char b[100]; 
+
+    strcpy(b, a.c_str());
+
+    cout << strlen(b);
 
     return 0;
 }
