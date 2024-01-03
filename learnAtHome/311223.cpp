@@ -20,7 +20,7 @@ int countDivision(int x)
     return count;
 }
 
-int findTriangleNumberHasNDivision(int n)
+long long findTriangleNumberHasNDivision(int n)
 {
     long long number = 0;
     int check, x = 0;
@@ -30,10 +30,18 @@ int findTriangleNumberHasNDivision(int n)
     {
         number = getTriangleNumber(x++, number);
         check = countDivision(number);
-        if (check == n) flag = true;
+        if (check >= n) flag = true;
     }
 
     return number;
+}
+
+void printDivision(int num)
+{
+    for (int i = 1; i <= num; i++)
+    {
+        if (num % i == 0) cout << i << " ";
+    }
 }
 
 int main()
@@ -42,7 +50,12 @@ int main()
     cout << "Hay nhap so uoc ";
     cin >> number;
 
-    cout << "So co " << number << " uoc dau tien la " << findTriangleNumberHasNDivision(number) << endl;
+    int check = findTriangleNumberHasNDivision(number);
+
+    cout << "Uoc cua " << number << " la: ";
+    printDivision(check);
+
+    cout << endl << "So co " << number << " uoc dau tien la " << check << endl;
 
     return 0;
 }
