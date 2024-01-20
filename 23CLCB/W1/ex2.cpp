@@ -16,7 +16,7 @@ int main()
         min = c;
     else 
         min = d;
-
+// PHAN NHUT ANH
     cout << "min: " << min;
 
     return 0;
